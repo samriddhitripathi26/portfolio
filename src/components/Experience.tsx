@@ -7,19 +7,16 @@ export default function Experience() {
     {
       title: "Head, Media Department",
       organization: "Android Club, VIT Bhopal",
-      date: "Present",
       description: "Leading the media team to create engaging content, manage digital presence, and execute strategic campaigns for club events. Fostering a collaborative environment to deliver high-quality assets.",
     },
     {
       title: "Core Events Team",
       organization: "GDGC Events Team",
-      date: "Past",
       description: "Managed and organized large-scale technical events successfully. Coordinated with speakers, sponsors, and student communities to ensure seamless execution and high attendee satisfaction.",
     },
     {
       title: "School Fest Organizer",
       organization: "High School",
-      date: "Past",
       description: "Managed school-wide events with dedication and confidence. Handled logistics, team coordination, and event planning to create memorable experiences for hundreds of students.",
     }
   ];
@@ -51,11 +48,8 @@ export default function Experience() {
               {/* Timeline Dot */}
               <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-5 h-5 rounded-full bg-[#0b0f17] border-2 border-purple-500 group-hover:bg-purple-500 group-hover:scale-125 transition-all duration-300 shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
               
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3">
+              <div className="mb-4">
                 <h3 className="text-2xl font-bold text-white tracking-tight">{exp.title}</h3>
-                <span className="text-sm font-medium text-cyan-400 px-4 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/20 w-fit backdrop-blur-sm">
-                  {exp.date}
-                </span>
               </div>
               
               <h4 className="text-lg font-medium text-purple-300 mb-4">{exp.organization}</h4>

@@ -6,10 +6,16 @@ import { ArrowUpRight } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-      title: "SupplierScout Platform",
-      description: "A comprehensive platform to connect businesses with reliable suppliers, featuring advanced search, verification systems, and streamlined communication channels.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
-      link: "#"
+      title: "Flagify",
+      description: "An open-source A/B testing platform with React dashboard, real-time flag evaluation engine, multi-language SDKs, statistical experiment calculations, Redis-cached sub-50ms delivery, and multi-environment MongoDB configuration.",
+      tech: ["React", "Node.js", "Redis", "MongoDB", "A/B Testing"],
+      link: "https://github.com/samriddhitripathi26/Flagify"
+    },
+    {
+      title: "RepoSphere",
+      description: "A unified repository intelligence dashboard for GitHub and Forgejo ecosystems. Helps developers and teams monitor repository activity, track project health, and manage issues and PRs from a single interface.",
+      tech: ["React", "TypeScript", "Vite", "Docker", "Tailwind CSS"],
+      link: "https://github.com/samriddhitripathi26/RepoSphere"
     },
     {
       title: "Freelance Marketplace Platform",
@@ -29,7 +35,7 @@ export default function Projects() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Selected Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Projects</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
         </motion.div>
 

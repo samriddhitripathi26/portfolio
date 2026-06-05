@@ -6,7 +6,7 @@ import { Code2, Users, Lightbulb, Rocket } from "lucide-react";
 export default function About() {
   const skills = [
     { icon: <Code2 className="w-5 h-5 text-purple-400" />, title: "Full Stack Dev", desc: "Building scalable web applications" },
-    { icon: <Lightbulb className="w-5 h-5 text-cyan-400" />, title: "Product Strategy", desc: "Focusing on usability and growth" },
+    { icon: <Lightbulb className="w-5 h-5 text-cyan-400" />, title: "Innovation", desc: "Fostering creative and impactful solutions" },
     { icon: <Users className="w-5 h-5 text-blue-400" />, title: "Leadership", desc: "Guiding teams to execution" },
     { icon: <Rocket className="w-5 h-5 text-pink-400" />, title: "Problem Solving", desc: "Turning ideas into reality" }
   ];
@@ -34,13 +34,13 @@ export default function About() {
             className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-6 font-light"
           >
             <p>
-              Hi! I'm <span className="text-white font-medium">Samriddhi Tripathi</span>, a Computer Science student at <span className="text-white font-medium">VIT Bhopal</span>. I am passionate about blending code with creativity to build products that people actually want to use.
+              Hi, I'm <span className="text-white font-medium">Samriddhi Tripathi</span>, a Computer Science Engineering student at <span className="text-white font-medium">VIT Bhopal University</span>. I have a keen interest in software development and enjoy building applications that solve real-world problems.
             </p>
             <p>
-              My journey involves more than just writing code. I am deeply interested in <span className="text-purple-300 font-medium">product usability, growth strategy,</span> and <span className="text-cyan-300 font-medium">event leadership</span>. I believe that great software is built at the intersection of technical excellence and deep empathy for the user.
+              What excites me most about this field is the opportunity to create <span className="text-purple-300 font-medium">impactful solutions</span> that make people's lives easier. I am passionate about continuously learning new technologies, improving my skills, and taking on <span className="text-cyan-300 font-medium">challenges</span> that help me grow both personally and professionally.
             </p>
             <p>
-              Whether it's leading a technical team, organizing a massive college fest, or architecting a new web platform, my focus is always on execution, communication, and solving hard problems effectively.
+              My goal is to become a skilled <span className="text-white font-medium">software engineer</span> who can contribute to meaningful products and make a positive impact through technology.
             </p>
           </motion.div>
 

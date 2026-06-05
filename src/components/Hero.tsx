@@ -45,11 +45,9 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed font-light"
+            className="text-lg md:text-xl md:text-2xl text-gray-400 max-w-2xl mb-10 leading-relaxed font-light"
           >
-            <span className="text-gray-200 font-medium">Building products.</span>{" "}
-            <span className="text-purple-300/80 font-medium">Leading teams.</span>{" "}
-            <span className="text-cyan-300/80 font-medium">Creating meaningful digital experiences.</span>
+            <span className="text-purple-300/90 font-medium">Full Stack Developer</span>
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
@@ -84,7 +82,7 @@ export default function Hero() {
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
               className="relative w-full h-full rounded-full overflow-hidden border border-white/10 bg-white/5 p-2 backdrop-blur-sm"
             >
-              <div className="relative w-full h-full rounded-full overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+              <div className="relative w-full h-full rounded-full overflow-hidden transition-all duration-700">
                 <Image
                   src="/profile-new.jpeg"
                   alt="Samriddhi Tripathi"
