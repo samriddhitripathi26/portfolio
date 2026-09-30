@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Samriddhi Tripathi | Portfolio",
-  description: "Samriddhi Tripathi - Full Stack Developer, Growth & Strategy Enthusiast",
+  title: "Samriddhi Tripathi | Full Stack Developer",
+  description: "Samriddhi Tripathi - Full Stack Developer specializing in AI integrations, distributed systems, and modern web applications.",
 };
 
 export default function RootLayout({

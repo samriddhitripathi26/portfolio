@@ -25,19 +25,20 @@ export default function Experience() {
       ]
     },
     {
-      title: "Head, Media Department",
-      organization: "Android Club, VIT Bhopal",
-      description: "Led the media team to create engaging content, manage digital presence, and execute strategic campaigns for club events. Fostered a collaborative environment to deliver high-quality assets.",
+      title: "Social Media Manager",
+      organization: "Android Club",
+      points: [
+        "Managed social media presence across platforms, increasing follower engagement by 35% and reach by 50%.",
+        "Coordinated outreach for 5+ tech events, resulting in 200+ student registrations per event."
+      ]
     },
     {
-      title: "Core Events Team",
-      organization: "GDGC Events Team",
-      description: "Managed and organized large-scale technical events successfully. Coordinated with speakers, sponsors, and student communities to ensure seamless execution and high attendee satisfaction.",
-    },
-    {
-      title: "School Fest Organizer",
-      organization: "High School",
-      description: "Managed school-wide events with dedication and confidence. Handled logistics, team coordination, and event planning to create memorable experiences for hundreds of students.",
+      title: "Events Team Member",
+      organization: "Google Developers Group (GDG)",
+      points: [
+        "Organised 8+ technical workshops and hackathons with 150+ average attendance, ensuring smooth on-ground execution.",
+        "Collaborated with speakers and sponsors, handling logistics and post-event feedback collection."
+      ]
     }
   ];
 
@@ -51,11 +52,14 @@ export default function Experience() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-20 text-center"
         >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-950/40 border border-red-500/20 text-red-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            Career & Community
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Leadership & Experience</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto" />
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 via-rose-500 to-red-400 rounded-full mx-auto shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
         </motion.div>
 
-        <div className="relative border-l border-white/10 pl-8 md:pl-12 ml-4 md:ml-0 space-y-16">
+        <div className="relative border-l-2 border-red-950/60 pl-8 md:pl-12 ml-4 md:ml-0 space-y-16">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -63,22 +67,22 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="relative group"
+              className="relative group p-6 md:p-8 rounded-3xl bg-neutral-950/60 border border-white/[0.06] hover:border-red-500/30 hover:bg-neutral-900/60 transition-all duration-300 shadow-md hover:shadow-[0_0_25px_rgba(239,68,68,0.08)]"
             >
               {/* Timeline Dot */}
-              <div className="absolute -left-[41px] md:-left-[57px] top-2.5 w-5 h-5 rounded-full bg-[#0b0f17] border-2 border-purple-500 group-hover:bg-purple-500 group-hover:scale-125 transition-all duration-300 shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
+              <div className="absolute -left-[45px] md:-left-[61px] top-8 w-5 h-5 rounded-full bg-[#050505] border-2 border-red-500 group-hover:bg-red-500 group-hover:scale-125 transition-all duration-300 shadow-[0_0_12px_rgba(239,68,68,0.8)]" />
               
               <div className="mb-4 flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                <h3 className="text-2xl font-bold text-white tracking-tight">{exp.title}</h3>
+                <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-red-200 transition-colors">{exp.title}</h3>
                 {exp.date && (
-                  <span className="text-sm font-medium text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full w-fit whitespace-nowrap">
+                  <span className="text-xs md:text-sm font-semibold text-red-300 bg-red-950/40 border border-red-500/30 px-3.5 py-1 rounded-full w-fit whitespace-nowrap shadow-sm">
                     {exp.date}
                   </span>
                 )}
               </div>
               
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
-                <h4 className="text-lg font-medium text-purple-300">{exp.organization}</h4>
+                <h4 className="text-base md:text-lg font-medium text-red-400">{exp.organization}</h4>
                 {exp.location && (
                   <span className="text-sm text-gray-600 hidden sm:inline">•</span>
                 )}
@@ -88,16 +92,16 @@ export default function Experience() {
               </div>
               
               {exp.points ? (
-                <ul className="space-y-3 text-gray-400 text-lg leading-relaxed font-light list-none">
+                <ul className="space-y-3 text-gray-300 text-base md:text-lg leading-relaxed font-light list-none">
                   {exp.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <span className="text-purple-400 mt-2.5 w-1.5 h-1.5 rounded-full shrink-0 bg-purple-400" />
+                      <span className="text-red-500 mt-2.5 w-1.5 h-1.5 rounded-full shrink-0 bg-red-500 shadow-[0_0_6px_rgba(239,68,68,0.8)]" />
                       <span>{point}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-400 text-lg leading-relaxed font-light">{exp.description}</p>
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light">{exp.description}</p>
               )}
             </motion.div>
           ))}
@@ -106,4 +110,5 @@ export default function Experience() {
     </section>
   );
 }
+
 

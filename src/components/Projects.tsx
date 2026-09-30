@@ -1,27 +1,58 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+
+interface ProjectItem {
+  title: string;
+  subtitle?: string;
+  date?: string;
+  featured?: boolean;
+  bullets?: string[];
+  description?: string;
+  tech: string[];
+  link: string;
+}
 
 export default function Projects() {
-  const projects = [
+  const projects: ProjectItem[] = [
+    {
+      title: "TestPilot AI",
+      subtitle: "AI-Powered Unit Test Generation & Validation Suite",
+      date: "Jan 2026 – Mar 2026",
+      featured: true,
+      bullets: [
+        "Architected a full-stack MERN application enabling developers to paste code functions and receive AI-generated unit test suites with edge cases, boundary conditions, and error scenarios across 4 languages (JavaScript, TypeScript, Python, Java) and 4 test frameworks (Jest, Mocha, PyTest, JUnit).",
+        "Engineered a structured output validation pipeline that parses AI-generated test code against the original function’s variable scope, reducing hallucinated or invalid test cases by 85% across 500+ generations, with automatic regeneration on validation failure.",
+        "Implemented a background job queue using BullMQ with per-user rate limiting (10 generations/hour) and retry logic with exponential backoff, enabling concurrent request handling without API rate limit violations or service degradation."
+      ],
+      tech: ["React", "Node.js", "MongoDB", "Gemini API", "Monaco Editor", "BullMQ", "JWT"],
+      link: "https://github.com/samriddhitripathi26/TestPilot-AI.git"
+    },
     {
       title: "Flagify",
-      description: "An open-source A/B testing platform with React dashboard, real-time flag evaluation engine, multi-language SDKs, statistical experiment calculations, Redis-cached sub-50ms delivery, and multi-environment MongoDB configuration.",
-      tech: ["React", "Node.js", "Redis", "MongoDB", "A/B Testing"],
+      subtitle: "Enterprise Feature Flagging & Real-Time A/B Testing Platform",
+      date: "Jan 2026 – Mar 2026",
+      bullets: [
+        "Engineered a feature flag platform enabling real-time toggling of 500+ flags across 3 microservices, reducing rollout time by 40%.",
+        "Integrated Redis caching to achieve sub-50 ms API responses, reducing latency by 60% while supporting 200+ concurrent feature evaluations.",
+        "Authored multilingual RESTful SDKs in Python and JavaScript, added Jest tests (85% coverage), and Dockerized services for consistent deployments."
+      ],
+      tech: ["TypeScript", "Next.js", "React", "Node.js", "Express", "MongoDB", "Redis"],
       link: "https://github.com/samriddhitripathi26/Flagify"
     },
     {
       title: "RepoSphere",
-      description: "A unified repository intelligence dashboard for GitHub and Forgejo ecosystems. Helps developers and teams monitor repository activity, track project health, and manage issues and PRs from a single interface.",
-      tech: ["React", "TypeScript", "Vite", "Docker", "Tailwind CSS"],
+      subtitle: "Unified Git Repository Intelligence & Commits Analytics Dashboard",
+      date: "Jan 2025 – Mar 2025",
+      bullets: [
+        "Created a GitHub analytics dashboard processing 10,000+ commits across 500+ repositories with interactive visualizations and repository insights.",
+        "Implemented OAuth Device Flow authentication, securing 200+ user sessions through server-side token storage and automatic refresh.",
+        "Streamlined GitHub Actions CI/CD pipelines, reducing deployment errors by 70% and improving release reliability."
+      ],
+      tech: ["React", "TypeScript", "Node.js", "REST API", "OAuth", "Tailwind CSS"],
       link: "https://github.com/samriddhitripathi26/RepoSphere"
-    },
-    {
-      title: "Freelance Marketplace Platform",
-      description: "A robust MERN stack application facilitating freelance work. Includes features for job posting, bidding, secure contracts, dispute resolution, and a rating system.",
-      tech: ["MongoDB", "Express.js", "React", "Node.js"],
-      link: "#"
     }
   ];
 
@@ -35,11 +66,14 @@ export default function Projects() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Projects</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-950/40 border border-red-500/20 text-red-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            Featured Work
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Featured Projects</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 via-rose-500 to-red-400 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="space-y-10">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -47,31 +81,92 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative p-10 rounded-[2rem] bg-white/[0.02] border border-white/[0.08] overflow-hidden hover:bg-white/[0.04] transition-colors duration-500 backdrop-blur-sm flex flex-col h-full"
+              className={`group relative p-8 md:p-10 rounded-[2rem] bg-neutral-950/80 border ${
+                project.featured ? "border-red-500/30 shadow-[0_0_30px_rgba(239,68,68,0.12)]" : "border-white/[0.08]"
+              } overflow-hidden hover:border-red-500/40 hover:bg-neutral-900/70 transition-all duration-500 backdrop-blur-md flex flex-col`}
             >
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 via-rose-950/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
               
               <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-8">
-                  <h3 className="text-3xl font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <a href={project.link} className="p-3 bg-white/5 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 shrink-0 ml-4">
-                    <ArrowUpRight className="w-6 h-6 text-gray-300 group-hover:text-white" />
-                  </a>
+                {/* Header Row */}
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight group-hover:text-red-300 transition-colors duration-300 flex items-center gap-2">
+                        {project.title}
+                        {project.featured && (
+                          <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-red-300 bg-red-950/60 border border-red-500/40 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                            <Sparkles className="w-3 h-3 text-red-400" /> Featured
+                          </span>
+                        )}
+                      </h3>
+                    </div>
+                    {project.subtitle && (
+                      <p className="text-sm md:text-base text-gray-400 font-normal">
+                        {project.subtitle}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-3 shrink-0">
+                    {project.date && (
+                      <span className="text-xs md:text-sm font-semibold text-red-300/90 bg-red-950/40 border border-red-500/20 px-3 py-1 rounded-full whitespace-nowrap">
+                        {project.date}
+                      </span>
+                    )}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2.5 bg-neutral-900 border border-white/10 rounded-full hover:bg-red-600 hover:border-red-500 hover:text-white transition-all duration-300 hover:scale-110 shrink-0 group/btn shadow-md"
+                      title="View GitHub Repository"
+                    >
+                      <ArrowUpRight className="w-5 h-5 text-gray-300 group-hover/btn:text-white group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                    </a>
+                  </div>
                 </div>
+
+                {/* Bullets or Description */}
+                {project.bullets && (
+                  <ul className="space-y-3.5 text-gray-300 text-sm md:text-base leading-relaxed font-light mb-8 flex-grow">
+                    {project.bullets.map((bullet, bIndex) => (
+                      <li key={bIndex} className="flex items-start gap-3">
+                        <span className="text-red-500 mt-2 w-1.5 h-1.5 rounded-full shrink-0 bg-red-500 shadow-[0_0_6px_rgba(239,68,68,0.8)]" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {project.description && (
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-8 flex-grow font-light">
+                    {project.description}
+                  </p>
+                )}
                 
-                <p className="text-gray-400 text-lg leading-relaxed mb-10 flex-grow font-light">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-3 mt-auto">
-                  {project.tech.map((tech, i) => (
-                    <span key={i} className="px-4 py-1.5 text-sm font-medium text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
+                {/* Tech Pills & Link */}
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/[0.06] mt-auto">
+                  <div className="flex flex-wrap gap-2 md:gap-2.5">
+                    {project.tech.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-3.5 py-1 text-xs md:text-sm font-medium text-red-300 bg-red-950/40 border border-red-500/25 rounded-xl hover:border-red-500/50 hover:bg-red-900/30 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-gray-300 hover:text-red-400 transition-colors"
+                  >
+                    <FaGithub className="w-4 h-4 text-red-400" />
+                    <span>Source Code</span>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -81,3 +176,4 @@ export default function Projects() {
     </section>
   );
 }
+
