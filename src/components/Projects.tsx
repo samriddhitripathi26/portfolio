@@ -23,9 +23,8 @@ export default function Projects() {
       date: "Jan 2026 – Mar 2026",
       featured: true,
       bullets: [
-        "Architected a full-stack MERN application enabling developers to paste code functions and receive AI-generated unit test suites with edge cases, boundary conditions, and error scenarios across 4 languages (JavaScript, TypeScript, Python, Java) and 4 test frameworks (Jest, Mocha, PyTest, JUnit).",
-        "Engineered a structured output validation pipeline that parses AI-generated test code against the original function’s variable scope, reducing hallucinated or invalid test cases by 85% across 500+ generations, with automatic regeneration on validation failure.",
-        "Implemented a background job queue using BullMQ with per-user rate limiting (10 generations/hour) and retry logic with exponential backoff, enabling concurrent request handling without API rate limit violations or service degradation."
+        "Architected a full-stack MERN application that generates AI-powered unit tests (Jest, Mocha, PyTest, JUnit) with edge-case coverage, secured with JWT authentication, and built a scope-based output validation pipeline with auto-regeneration that cut invalid test cases by 85% across 500+ generations.",
+        "Implemented a BullMQ background job queue with per-user rate limiting (10 generations/hour) and exponential-backoff retries, enabling reliable concurrent request handling without API rate limit violations."
       ],
       tech: ["React", "Node.js", "MongoDB", "Gemini API", "Monaco Editor", "BullMQ", "JWT"],
       link: "https://github.com/samriddhitripathi26/TestPilot-AI.git"
@@ -35,9 +34,8 @@ export default function Projects() {
       subtitle: "Enterprise Feature Flagging & Real-Time A/B Testing Platform",
       date: "Jan 2026 – Mar 2026",
       bullets: [
-        "Engineered a feature flag platform enabling real-time toggling of 500+ flags across 3 microservices, reducing rollout time by 40%.",
-        "Integrated Redis caching to achieve sub-50 ms API responses, reducing latency by 60% while supporting 200+ concurrent feature evaluations.",
-        "Authored multilingual RESTful SDKs in Python and JavaScript, added Jest tests (85% coverage), and Dockerized services for consistent deployments."
+        "Engineered a feature flag platform using Node.js, Express, and MongoDB for real-time toggling of 500+ flags across 3 microservices, reducing rollout time by 40%, with Python and JavaScript REST SDKs.",
+        "Integrated Redis caching for sub-50 ms API responses (60% latency reduction, 200+ concurrent evaluations), and added Jest tests (85% coverage) and Docker containerization for consistent deployments."
       ],
       tech: ["TypeScript", "Next.js", "React", "Node.js", "Express", "MongoDB", "Redis"],
       link: "https://github.com/samriddhitripathi26/Flagify"
@@ -47,9 +45,8 @@ export default function Projects() {
       subtitle: "Unified Git Repository Intelligence & Commits Analytics Dashboard",
       date: "Jan 2025 – Mar 2025",
       bullets: [
-        "Created a GitHub analytics dashboard processing 10,000+ commits across 500+ repositories with interactive visualizations and repository insights.",
-        "Implemented OAuth Device Flow authentication, securing 200+ user sessions through server-side token storage and automatic refresh.",
-        "Streamlined GitHub Actions CI/CD pipelines, reducing deployment errors by 70% and improving release reliability."
+        "Built a GitHub analytics dashboard with React, TypeScript, and REST APIs, processing 10,000+ commits across 500+ repositories with interactive visualizations.",
+        "Implemented OAuth Device Flow authentication with server-side token storage and automatic refresh, securing 200+ user sessions, and streamlined GitHub Actions CI/CD pipelines to cut deployment errors by 70%."
       ],
       tech: ["React", "TypeScript", "Node.js", "REST API", "OAuth", "Tailwind CSS"],
       link: "https://github.com/samriddhitripathi26/RepoSphere"

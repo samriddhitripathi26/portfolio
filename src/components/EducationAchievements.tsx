@@ -30,6 +30,20 @@ export default function EducationAchievements() {
       scale: "1000+ Teams Worldwide",
       desc: "Selected among top global finalist teams for architecting high-impact scalable software solutions.",
       badge: "Global Finalist"
+    },
+    {
+      title: "3rd Place Winner",
+      event: "SolVIT Hackathon 2025",
+      scale: "150+ Teams",
+      desc: "Secured 3rd place for developing an innovative prototype under competitive hackathon constraints.",
+      badge: "3rd Place"
+    },
+    {
+      title: "Hackathon Track Record",
+      event: "8+ Hackathons Across India",
+      scale: "National Competitions",
+      desc: "Participated and built end-to-end full-stack and AI applications across 8+ hackathons nationwide.",
+      badge: "8+ Hackathons"
     }
   ];
 

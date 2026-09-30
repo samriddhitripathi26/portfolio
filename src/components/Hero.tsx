@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Download, ArrowRight, Mail, Sparkles, GraduationCap, Briefcase, Trophy, ExternalLink } from "lucide-react";
+import { Download, ArrowRight, Mail, Sparkles, GraduationCap, Briefcase, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import Image from "next/image";
@@ -120,16 +120,6 @@ export default function Hero() {
 
           {/* Identity Card Container */}
           <div className="relative w-full max-w-[360px] md:max-w-[390px] rounded-[2.5rem] bg-neutral-950/90 border border-red-500/30 p-4 md:p-5 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] flex flex-col group">
-            
-            {/* Card Header Bar */}
-            <div className="flex items-center justify-between px-2 py-1.5 mb-3 border-b border-white/[0.08] text-[11px] font-mono text-gray-400 uppercase tracking-wider">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
-                <span className="text-gray-300 font-semibold">DEV_ID // ST-26</span>
-              </div>
-              <span className="text-red-400 font-semibold">VIT CSE &apos;27</span>
-            </div>
-
             {/* Photo Container */}
             <div className="relative w-full aspect-[4/4.6] rounded-[2rem] overflow-hidden border border-white/10 bg-neutral-900 shadow-inner">
               <Image
@@ -144,14 +134,10 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent opacity-80" />
 
               {/* In-Card Floating Badges */}
-              <div className="absolute top-3 left-3 right-3 flex justify-between items-center pointer-events-none">
+              <div className="absolute top-3 left-3 flex items-center pointer-events-none">
                 <div className="px-3 py-1 rounded-full bg-neutral-950/80 border border-red-500/30 backdrop-blur-md text-[11px] font-semibold text-red-300 shadow-lg flex items-center gap-1.5">
                   <GraduationCap className="w-3.5 h-3.5 text-red-400" />
                   <span>CGPA 8.80</span>
-                </div>
-                <div className="px-3 py-1 rounded-full bg-neutral-950/80 border border-white/10 backdrop-blur-md text-[11px] font-semibold text-gray-200 shadow-lg flex items-center gap-1.5">
-                  <Trophy className="w-3 h-3 text-amber-400" />
-                  <span>Finalist &apos;25</span>
                 </div>
               </div>
 

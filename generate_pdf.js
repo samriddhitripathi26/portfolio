@@ -170,33 +170,39 @@ const htmlContent = `<!DOCTYPE html>
   <div class="section-title">PROJECTS</div>
   
   <div class="entry-header">
-    <span><strong>TestPilot AI</strong> | React, Node.js, MongoDB, Gemini API, Monaco Editor, BullMQ, JWT | <a href="https://github.com/samriddhitripathi26/TestPilot-AI.git" style="text-decoration: underline; font-weight: bold;">Link</a></span>
+    <span><strong>TestPilot AI</strong> | <a href="https://github.com/samriddhitripathi26/TestPilot-AI.git" style="text-decoration: underline;">Link</a></span>
     <span class="entry-date" style="font-style: italic;">January 2026 – March 2026</span>
   </div>
+  <div style="font-size: 8.8pt; font-style: italic; margin-bottom: 1.5px;">
+    React, Node.js, MongoDB, Gemini API, Monaco Editor, BullMQ, JWT
+  </div>
   <ul>
-    <li>Architected a full-stack MERN application enabling developers to paste code functions and receive AI-generated unit test suites with edge cases, boundary conditions, and error scenarios across 4 languages (JavaScript, TypeScript, Python, Java) and 4 test frameworks (Jest, Mocha, PyTest, JUnit).</li>
-    <li>Engineered a structured output validation pipeline that parses AI-generated test code against the original function’s variable scope, reducing hallucinated or invalid test cases by 85% across 500+ generations, with automatic regeneration on validation failure.</li>
-    <li>Implemented a background job queue using BullMQ with per-user rate limiting (10 generations/hour) and retry logic with exponential backoff, enabling concurrent request handling without API rate limit violations or service degradation.</li>
+    <li>Architected a full-stack MERN application that generates AI-powered unit tests (Jest, Mocha, PyTest, JUnit) with edge-case coverage, secured with JWT authentication, and built a scope-based output validation pipeline with auto-regeneration that cut invalid test cases by 85% across 500+ generations.</li>
+    <li>Implemented a BullMQ background job queue with per-user rate limiting (10 generations/hour) and exponential-backoff retries, enabling reliable concurrent request handling without API rate limit violations.</li>
   </ul>
 
-  <div class="entry-header" style="margin-top: 2.5px;">
-    <span><strong>Flagify</strong> | TypeScript, Next.js, React, Node.js, Express, MongoDB, Redis | <a href="https://github.com/samriddhitripathi26/Flagify" style="text-decoration: underline; font-weight: bold;">Link</a></span>
+  <div class="entry-header" style="margin-top: 3px;">
+    <span><strong>Flagify</strong> | <a href="https://github.com/samriddhitripathi26/Flagify" style="text-decoration: underline;">Link</a></span>
     <span class="entry-date" style="font-style: italic;">Jan 2026 – Mar 2026</span>
   </div>
-  <ul>
-    <li>Engineered a feature flag platform enabling real-time toggling of 500+ flags across 3 microservices, reducing rollout time by 40%.</li>
-    <li>Integrated Redis caching to achieve sub-50 ms API responses, reducing latency by 60% while supporting 200+ concurrent feature evaluations.</li>
-    <li>Authored multilingual RESTful SDKs in Python and JavaScript, added Jest tests (85% coverage), and Dockerized services for consistent deployments.</li>
-  </ul>
-
-  <div class="entry-header" style="margin-top: 2.5px;">
-    <span><strong>RepoSphere</strong> | React, TypeScript, Node.js, REST API, OAuth| <a href="https://github.com/samriddhitripathi26/RepoSphere" style="text-decoration: underline; font-weight: bold;">Link</a></span>
-    <span class="entry-date" style="font-style: italic;">Jan 2025 – Mar 2025</span>
+  <div style="font-size: 8.8pt; font-style: italic; margin-bottom: 1.5px;">
+    TypeScript, Next.js, React, Node.js, Express, MongoDB, Redis
   </div>
   <ul>
-    <li>Created a GitHub analytics dashboard processing 10,000+ commits across 500+ repositories with interactive visualizations and repository insights.</li>
-    <li>Implemented OAuth Device Flow authentication, securing 200+ user sessions through server-side token storage and automatic refresh.</li>
-    <li>Streamlined GitHub Actions CI/CD pipelines, reducing deployment errors by 70% and improving release reliability.</li>
+    <li>Engineered a feature flag platform using Node.js, Express, and MongoDB for real-time toggling of 500+ flags across 3 microservices, reducing rollout time by 40%, with Python and JavaScript REST SDKs.</li>
+    <li>Integrated Redis caching for sub-50 ms API responses (60% latency reduction, 200+ concurrent evaluations), and added Jest tests (85% coverage) and Docker containerization for consistent deployments.</li>
+  </ul>
+
+  <div class="entry-header" style="margin-top: 3px;">
+    <span><strong>RepoSphere</strong> | <a href="https://github.com/samriddhitripathi26/RepoSphere" style="text-decoration: underline;">Link</a></span>
+    <span class="entry-date" style="font-style: italic;">Jan 2025 – Mar 2025</span>
+  </div>
+  <div style="font-size: 8.8pt; font-style: italic; margin-bottom: 1.5px;">
+    React, TypeScript, Node.js, REST API, OAuth
+  </div>
+  <ul>
+    <li>Built a GitHub analytics dashboard with React, TypeScript, and REST APIs, processing 10,000+ commits across 500+ repositories with interactive visualizations.</li>
+    <li>Implemented OAuth Device Flow authentication with server-side token storage and automatic refresh, securing 200+ user sessions, and streamlined GitHub Actions CI/CD pipelines to cut deployment errors by 70%.</li>
   </ul>
 </div>
 
